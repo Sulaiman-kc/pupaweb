@@ -1,0 +1,63 @@
+
+<div class="container row">
+  <div class="col-8">
+    <h3 class="text-center">
+      Add College
+    </h3>
+  </div>
+  <div class="col-4" align="right">
+    <mat-dialog-actions align="right">
+      <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+      <button mat-raised-button color="primary" (click)="save()" cdkFocusInitial>Save</button>
+      <!-- <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button> -->
+    </mat-dialog-actions>
+  </div>
+</div>
+<hr>
+
+<div class="text-center">
+  <mat-form-field class="example-full-width col-md-5 col-sm-12">
+    <input [(ngModel)]="heading" matInput placeholder="Title">
+  </mat-form-field>
+  <mat-form-field class="example-full-width col-md-5 col-sm-12">
+    <input [(ngModel)]="place" matInput placeholder="Place">
+  </mat-form-field>
+  <!-- <mat-form-field class="example-full-width col-md-5 col-sm-12">
+    <input matInput placeholder="Image URL4">
+  </mat-form-field> -->
+  <mat-form-field appearance="fill" style="width: 90%;">
+    <mat-label>Description</mat-label>
+    <textarea [(ngModel)]="Description" matInput></textarea>
+  </mat-form-field>
+  <!-- <mat-form-field class="example-full-width col-md-5 col-sm-12">
+    <input matInput placeholder="Image URL5">
+  </mat-form-field> -->
+  <br>
+  <button mat-raised-button (click)="openDialog('Image')">Add/View Image ({{image.length}})</button> 
+  <br>
+  <br>
+  <button mat-raised-button (click)="openDialog('key_specs')">Add/View key_specs ({{key.length}})</button>
+  <br>
+  <br>
+  <h4>Course List</h4>
+  <hr>
+  <br>
+  <button mat-raised-button (click)="openDialog('Engineering')">Add/View Engineering ({{eng.length}})</button>
+  <br>
+  <br>
+  <button mat-raised-button (click)="openDialog('Management_degree')">Add/View Management_degree ({{deg.length}})</button>
+  <br>
+  <br>
+  <button mat-raised-button (click)="openDialog('Medical')">Add/View Medical ({{med.length}})</button>
+  <br>
+  <br>
+  <button mat-raised-button (click)="openDialog('Others')">Add/View Others ({{oth.length}})</button>
+  <br>
+  <br>
+  <br>
+  
+
+  <!-- <button mat-raised-button (click)="test()">test</button> -->
+
+
+</div>

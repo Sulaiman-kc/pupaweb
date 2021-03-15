@@ -1,0 +1,21 @@
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content{
+    padding: 0;
+}
+.oflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+}
+.pointer{
+    cursor: pointer;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

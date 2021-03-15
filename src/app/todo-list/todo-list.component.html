@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1 class="text-center">
+    Hello
+  </h1>
+
+  <button type="button" class="btn btn-primary" routerLink="/add">Add College</button> &nbsp;
+  <button type="button" class="btn btn-danger" (click)="logout()">Log Out</button>
+</div>
+
+<hr>
+
+<ul>
+  <li class="mb-3" *ngFor="let item of items">
+    <div class="row">
+      <div class="col">
+        {{item.title | titlecase}}
+        <div style="font-size: 10px;color: rgb(190, 190, 190);">{{item.place | titlecase}}</div>
+      </div>
+      <div style="text-align: right;" class="col">
+        <button class="btn btn-primary" (click)="update(item)">Update</button>
+        <!-- <button class="btn btn-danger ml-2" (click)="delete(item)">Delete</button> -->
+      </div>
+    </div>
+    
+    <hr>
+  </li>
+</ul>

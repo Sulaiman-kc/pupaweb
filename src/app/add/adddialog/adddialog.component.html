@@ -1,0 +1,45 @@
+<!-- <p style="text-align: center;">
+  {{title}}
+</p>
+<hr>
+<br>
+<div mat-dialog-actions class="center">
+  <button mat-raised-button color="primary" [mat-dialog-close]="data.item" cdkFocusInitial>Save</button>
+</div>
+<br> -->
+<div class="row">
+  <div class="col-8">
+    <h2 mat-dialog-title>{{title}}</h2>
+  </div>
+  <div class="col-4">
+    <mat-dialog-actions align="right">
+      <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+      <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+    </mat-dialog-actions>
+  </div>
+</div>
+
+
+<mat-dialog-content class="mat-typography">
+  <div class="row">
+    <div class="col-9">
+      <mat-form-field style="width: 100%;" class="example-full-width">
+        <input [(ngModel)]="url" matInput placeholder="Add Url">
+      </mat-form-field>
+    </div>
+    <div class="col-3">
+      <button (click)="test()" style="width: 70%;height: 70%;">+</button>
+    </div>
+  </div>
+  <mat-list role="list">
+    <mat-list-item style="height: 40px;" *ngFor="let url of urls" role="listitem" title="{{url}}">
+      <div class="col-10 oflow" *ngIf="title != 'key_specs'">{{url}}</div>
+      <div class="col-10 oflow" *ngIf="title == 'key_specs'">name:{{url.name}}, spec:{{url.spec}}</div>
+      <div class="col-2" style="text-align: right;right: 0px;"><mat-icon class="pointer" (click)="delete(url)" >delete</mat-icon></div>
+    </mat-list-item>
+    
+  </mat-list>
+</mat-dialog-content>
+
+
+
